@@ -1,4 +1,3 @@
-
 # Bulk Angular Component & Storybook Generator
 
 I built the **Bulk Angular Component & Storybook Generator** to solve a problem I faced time and again.
@@ -19,10 +18,10 @@ The best part? It’s already integrated with Storybook, so I can visualize and 
 - [Directory Structure](#directory-structure)
 - [Naming Conventions](#naming-conventions)
 - [Usage](#usage)
-    - [Running the Script](#running-the-script)
-    - [Command-Line Arguments](#command-line-arguments)
-    - [Examples](#examples)
-    - [Best Practices](#best-practices)
+  - [Running the Script](#running-the-script)
+  - [Command-Line Arguments](#command-line-arguments)
+  - [Examples](#examples)
+  - [Best Practices](#best-practices)
 - [Output](#output)
 - [Troubleshooting](#troubleshooting)
 - [Advanced Configuration](#advanced-configuration)
@@ -45,59 +44,60 @@ The **Bulk Angular Component & Storybook Generator** script is a powerful tool d
 - **Custom Naming Conventions:** Supports complex naming patterns, including handling hyphens and numerical patterns within names.
 - **Robust Error Handling:** Implements comprehensive logging and error detection to aid in debugging and maintenance.
 
----
+![Screenshot20240914at14904PM.png](assets/Populated-Storybook.png)
 
 ## Prerequisites
 
 Before using the **Bulk Generate Components** script, ensure that your development environment meets the following requirements:
 
 1. **Node.js:**
-    - **Version:** v12.x or higher
-    - **Installation:** [Download Node.js](https://nodejs.org/en/download/)
 
+   - **Version:** v12.x or higher
+   - **Installation:** [Download Node.js](https://nodejs.org/en/download/)
 2. **Angular CLI:**
-    - **Version:** Compatible with your Angular project (e.g., v12.x, v13.x)
-    - **Installation:**
-      ```bash
-      npm install -g @angular/cli
-      ```
 
+   - **Version:** Compatible with your Angular project (e.g., v12.x, v13.x)
+   - **Installation:**
+     ```bash
+     npm install -g @angular/cli
+     ```
 3. **Storybook:**
-    - **Version:** Compatible with your Angular project (e.g., v6.x or later)
-    - **Installation:**  
-      To integrate Storybook with Angular, run:
-      ```bash
-      npx sb init --type angular
-      ```
-    - **Dependencies:** Ensure that your project has `@storybook/angular` and `@storybook/addons` installed. These should be added automatically when running the command above.
 
+   - **Version:** Compatible with your Angular project (e.g., v6.x or later)
+   - **Installation:**
+     To integrate Storybook with Angular, run:
+     ```bash
+     npx sb init --type angular
+     ```
+   - **Dependencies:** Ensure that your project has `@storybook/angular` and `@storybook/addons` installed. These should be added automatically when running the command above.
 4. **Git (Optional):**
-    - For version control and collaboration.
-    - **Installation:** [Download Git](https://git-scm.com/downloads)
 
+   - For version control and collaboration.
+   - **Installation:** [Download Git](https://git-scm.com/downloads)
 5. **Code Editor:**
-    - Recommended: [Visual Studio Code](https://code.visualstudio.com/)
 
+   - Recommended: [Visual Studio Code](https://code.visualstudio.com/)
 
 Before using the **Bulk Generate Components** script, ensure that your development environment meets the following requirements:
 
 1. **Node.js:**
-    - **Version:** v12.x or higher
-    - **Installation:** [Download Node.js](https://nodejs.org/en/download/)
 
+   - **Version:** v12.x or higher
+   - **Installation:** [Download Node.js](https://nodejs.org/en/download/)
 2. **Angular CLI:**
-    - **Version:** Compatible with your Angular project (e.g., v12.x, v13.x)
-    - **Installation:**
-      ```bash
-      npm install -g @angular/cli
-      ```
 
+   - **Version:** Compatible with your Angular project (e.g., v12.x, v13.x)
+   - **Installation:**
+     ```bash
+     npm install -g @angular/cli
+     ```
 3. **Git (Optional):**
-    - For version control and collaboration.
-    - **Installation:** [Download Git](https://git-scm.com/downloads)
 
+   - For version control and collaboration.
+   - **Installation:** [Download Git](https://git-scm.com/downloads)
 4. **Code Editor:**
-    - Recommended: [Visual Studio Code](https://code.visualstudio.com/)
+
+   - Recommended: [Visual Studio Code](https://code.visualstudio.com/)
 
 ---
 
@@ -111,13 +111,11 @@ Follow these steps to set up the **Bulk Generate Components** script in your Ang
    git clone https://github.com/your-username/your-angular-project.git
    cd your-angular-project
    ```
-
 2. **Navigate to the Project Directory:**
 
    ```bash
    cd your-angular-project
    ```
-
 3. **Install Necessary Dependencies:**
 
    Ensure that all project dependencies are installed.
@@ -125,7 +123,6 @@ Follow these steps to set up the **Bulk Generate Components** script in your Ang
    ```bash
    npm install
    ```
-
 4. **Add the Script to Your Project:**
 
    Create a `scripts` directory (if it doesn't exist) and add the `bulk-generate-components.js` script.
@@ -136,7 +133,6 @@ Follow these steps to set up the **Bulk Generate Components** script in your Ang
    ```
 
    Copy and paste the provided `bulk-generate-components.js` script into this file.
-
 5. **Make the Script Executable (Optional):**
 
    If you're on a Unix-based system, you can make the script executable.
@@ -144,7 +140,6 @@ Follow these steps to set up the **Bulk Generate Components** script in your Ang
    ```bash
    chmod +x scripts/bulk-generate-components.js
    ```
-
 6. **Install Additional Dependencies:**
 
    The script relies on Node.js built-in modules (`fs`, `path`, `child_process`), so no additional npm packages are required. However, ensure that Angular CLI is installed globally as per the prerequisites.
@@ -180,16 +175,13 @@ Templates/
 
 ### Explanation
 
-- **Templates/Snippets:**  
+- **Templates/Snippets:**
   The root directory containing all your component templates.
-
-- **Marketing, Application UI, Layout, Ecommerce, etc.:**  
+- **Marketing, Application UI, Layout, Ecommerce, etc.:**
   Top-level categories representing different sections or features of your application.
-
-- **Subdirectories (e.g., Page Sections, Headings):**  
+- **Subdirectories (e.g., Page Sections, Headings):**
   Further categorization to organize components logically.
-
-- **`.txt` Files (e.g., pricing-sections.txt):**  
+- **`.txt` Files (e.g., pricing-sections.txt):**
   Each `.txt` file contains the HTML snippet or template content for the corresponding component.
 
 ---
@@ -202,34 +194,31 @@ Consistent naming is crucial for the script to function correctly. Adhere to the
 
 1. **Hyphens Preservation:**
 
-    - **Modules:** Use kebab-case (e.g., `page-sections.module.ts`).
-    - **Components:** Use kebab-case for filenames (e.g., `pricing-sections.component.ts`) and CamelCase for class names (e.g., `PricingSectionsComponent`).
-
+   - **Modules:** Use kebab-case (e.g., `page-sections.module.ts`).
+   - **Components:** Use kebab-case for filenames (e.g., `pricing-sections.component.ts`) and CamelCase for class names (e.g., `PricingSectionsComponent`).
 2. **Directory Names:**
 
-    - Should match the intended module and component names, using spaces or hyphens as needed.
-    - Example:  
-      `Page Sections/` contains `page-sections.module.ts` and `pricing-sections.component.ts`.
-
+   - Should match the intended module and component names, using spaces or hyphens as needed.
+   - Example:
+     `Page Sections/` contains `page-sections.module.ts` and `pricing-sections.component.ts`.
 3. **Selectors:**
 
-    - Use the `app-` prefix followed by the component name in kebab-case.
-    - Example:  
-      `<app-pricing-sections></app-pricing-sections>`
-
+   - Use the `app-` prefix followed by the component name in kebab-case.
+   - Example:
+     `<app-pricing-sections></app-pricing-sections>`
 4. **Handling Numerical Patterns:**
 
-    - Convert numerical patterns (e.g., `2x2`) to words (e.g., `twobytwo`) to ensure valid naming.
-    - Example:  
-      `2x2 Layout` becomes `twobytwo-layout.module.ts`.
+   - Convert numerical patterns (e.g., `2x2`) to words (e.g., `twobytwo`) to ensure valid naming.
+   - Example:
+     `2x2 Layout` becomes `twobytwo-layout.module.ts`.
 
 ### Example
 
-- **File Path:**  
+- **File Path:**
   `Templates/Snippets/Marketing/Page Sections/Pricing Sections/pricing-sections.txt`
-
 - **Generated Component:**
-    - **Class Name:** `PricingSectionsComponent`
-    - **Selector:** `app-pricing-sections`
-    - **Module Name:** `PageSectionsModule`
-    - **Module Import Path:** `'../page-sections.module'`
+
+  - **Class Name:** `PricingSectionsComponent`
+  - **Selector:** `app-pricing-sections`
+  - **Module Name:** `PageSectionsModule`
+  - **Module Import Path:** `'../page-sections.module'`
