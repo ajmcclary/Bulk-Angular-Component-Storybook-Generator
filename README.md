@@ -35,7 +35,7 @@ The best part? It’s already integrated with Storybook, so I can visualize and 
 
 ## Overview
 
-The **Bulk Generate Components** script is a powerful tool designed to automate the creation of Angular components, modules, and corresponding Storybook stories based on structured text files. By leveraging a predefined directory structure and naming conventions, this script streamlines the development workflow, ensuring consistency and efficiency in large-scale Angular projects.
+The **Bulk Angular Component & Storybook Generator** script is a powerful tool designed to automate the creation of Angular components, modules, and corresponding Storybook stories based on structured text files. By leveraging a predefined directory structure and naming conventions, this script streamlines the development workflow, ensuring consistency and efficiency in large-scale Angular projects.
 
 ### Key Features
 
@@ -48,6 +48,36 @@ The **Bulk Generate Components** script is a powerful tool designed to automate 
 ---
 
 ## Prerequisites
+
+Before using the **Bulk Generate Components** script, ensure that your development environment meets the following requirements:
+
+1. **Node.js:**
+    - **Version:** v12.x or higher
+    - **Installation:** [Download Node.js](https://nodejs.org/en/download/)
+
+2. **Angular CLI:**
+    - **Version:** Compatible with your Angular project (e.g., v12.x, v13.x)
+    - **Installation:**
+      ```bash
+      npm install -g @angular/cli
+      ```
+
+3. **Storybook:**
+    - **Version:** Compatible with your Angular project (e.g., v6.x or later)
+    - **Installation:**  
+      To integrate Storybook with Angular, run:
+      ```bash
+      npx sb init --type angular
+      ```
+    - **Dependencies:** Ensure that your project has `@storybook/angular` and `@storybook/addons` installed. These should be added automatically when running the command above.
+
+4. **Git (Optional):**
+    - For version control and collaboration.
+    - **Installation:** [Download Git](https://git-scm.com/downloads)
+
+5. **Code Editor:**
+    - Recommended: [Visual Studio Code](https://code.visualstudio.com/)
+
 
 Before using the **Bulk Generate Components** script, ensure that your development environment meets the following requirements:
 
@@ -145,12 +175,6 @@ Templates/
       Navigation/
         Tabs/
           tabs-with-underline-and-icons.txt
-    Layout/
-      Cards/
-        basic-card.txt
-    Ecommerce/
-      Untitled/
-        untitled.txt
     ...
 ```
 
