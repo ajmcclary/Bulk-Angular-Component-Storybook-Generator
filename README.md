@@ -1,4 +1,4 @@
-# Bulk Angular Component & Storybook Generator
+README
 
 I built the **Bulk Angular Component & Storybook Generator** to solve a problem I faced time and again.
 
