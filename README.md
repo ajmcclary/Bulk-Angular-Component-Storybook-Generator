@@ -10,6 +10,8 @@ That’s where this generator comes in. Now, I can take a snippet like "Constrai
 
 The best part? It’s already integrated with Storybook, so I can visualize and test it immediately. This tool has been a game-changer for me, saving me hours of repetitive work and allowing me to focus on building beautiful, functional UIs.
 
+![Screenshot20240914at14904PM.png](assets/Populated-Storybook.png)
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -43,8 +45,6 @@ The **Bulk Angular Component & Storybook Generator** script is a powerful tool d
 - **Storybook Integration:** Automatically generates Storybook stories for each component, facilitating seamless UI development and testing.
 - **Custom Naming Conventions:** Supports complex naming patterns, including handling hyphens and numerical patterns within names.
 - **Robust Error Handling:** Implements comprehensive logging and error detection to aid in debugging and maintenance.
-
-![Screenshot20240914at14904PM.png](assets/Populated-Storybook.png)
 
 ## Prerequisites
 
